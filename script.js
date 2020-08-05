@@ -3,7 +3,7 @@ window.onload = function () {
 
   // ajax call to retrieve data from API
   function getData() {
-    var queryURL = `http://www.omdbapi.com/?t=${query}&apikey=4d0263a7`;
+    var queryURL = `https://www.omdbapi.com/?t=${query}&apikey=4d0263a7`;
     $.ajax({
       url: queryURL,
       method: "get",
