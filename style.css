@@ -29,6 +29,11 @@
   margin: auto;
 }
 
+.posterImage {
+  margin-top: -415px;
+  margin-left: 50px;
+}
+
 @media screen and (max-width: 480px) {
   #mainJumbotron {
     background-image: url(./background.jpg);
@@ -54,5 +59,11 @@
     width: 500px;
     margin: auto;
     margin-left: 35px;
+  }
+
+  .posterImage {
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 140px;
   }
 }

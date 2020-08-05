@@ -17,6 +17,7 @@ window.onload = function () {
       displayData("Actors: ", response.Actors);
       displayData("Plot: ", response.Plot);
       displayData("Rating: ", response.imdbRating);
+      posterImage(response.Poster);
     });
   }
 
@@ -24,6 +25,7 @@ window.onload = function () {
   $("#searchButton").click(function () {
     $("#information").html("");
     $("#movieHeader").html("");
+    $("#imagePoster").html("");
     query = $("#inputBox").val();
     console.log(query);
     getData();
@@ -43,5 +45,14 @@ window.onload = function () {
     newli.className = "list-group-item dataList";
     newli.innerHTML = name + response;
     $("#information").append(newli);
+  }
+
+  //Display Poster
+
+  function posterImage(response) {
+    var newImg = document.createElement("img");
+    newImg.src = response;
+    newImg.className = "posterImage";
+    $("#imagePoster").append(newImg);
   }
 };
